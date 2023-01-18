@@ -8,6 +8,6 @@ class ExplorecaliApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("in contextLoads");
 	}
-
 }
