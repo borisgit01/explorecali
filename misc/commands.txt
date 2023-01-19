@@ -1,0 +1,22 @@
+# to create tour package ZC
+curl -X POST http://localhost:8080/tourPackages -H "Content-Type: application/json" -d @tourPackage.ZC.json
+
+# to update name of tour package ZC
+curl -X PUT http://localhost:8080/tourPackages/ZC -H "Content-Type: application/json" -d @tourPackage.ZC.update.json
+
+# to delete tour package ZC
+curl -X DELETE http://localhost:8080/tourPackages/ZC
+
+# search is also auto exposed
+curl http://localhost:8080/tourPackages/search
+curl http://localhost:8080/tourPackages/search/findByName?name=Backpack%20Cal
+
+curl http://localhost:8080/tours/search
+curl http://localhost:8080/tours/search/findByTourPackageCode?code=CC
+
+# paging, sorting
+# repository signature: public interface TourRepository extends PagingAndSortingRepository<Tour, Integer>, CrudRepository<Tour, Integer>
+curl http://localhost:8080/tours?size=3&page=1&sort=title,asc
+curl http://localhost:8080/tours/search/findByTourPackageCode?code=CC&size=3&page=1&sort=title,asc
+
+curl http://localhost:8080/packages
