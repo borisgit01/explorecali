@@ -2,8 +2,10 @@ package com.example.ec.domain;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
 import java.util.Objects;
 
+@Entity
 public class TourRating {
     @EmbeddedId
     private TourRatingPk pk;
