@@ -1,0 +1,26 @@
+2023-02-03 10:04:17.361  INFO 26880 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication on fedora with PID 26880 (/home/borg/projects/explorecali/target/classes started by borg in /home/borg/projects/explorecali)
+2023-02-03 10:04:17.373 DEBUG 26880 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v2.2.0.RELEASE, Spring v5.2.0.RELEASE
+2023-02-03 10:04:17.373  INFO 26880 --- [main] com.example.ec.ExplorecaliApplication    : No active profile set, falling back to default profiles: default
+2023-02-03 10:04:18.120  INFO 26880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2023-02-03 10:04:18.177  INFO 26880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50ms. Found 4 repository interfaces.
+2023-02-03 10:04:18.496  INFO 26880 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-03 10:04:18.754  INFO 26880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-03 10:04:18.763  INFO 26880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-03 10:04:18.763  INFO 26880 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-02-03 10:04:18.845  INFO 26880 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-03 10:04:18.846  INFO 26880 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1411 ms
+2023-02-03 10:04:18.957  INFO 26880 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-03 10:04:19.117  INFO 26880 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-03 10:04:19.315  INFO 26880 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-03 10:04:19.366  INFO 26880 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2023-02-03 10:04:19.478  INFO 26880 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2023-02-03 10:04:19.561  INFO 26880 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-02-03 10:04:20.135  INFO 26880 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-03 10:04:20.140  INFO 26880 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-03 10:04:20.822  WARN 26880 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-03 10:04:20.927  INFO 26880 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-03 10:04:21.250  INFO 26880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-03 10:04:21.253  INFO 26880 --- [main] com.example.ec.ExplorecaliApplication    : Started ExplorecaliApplication in 4.335 seconds (JVM running for 4.987)
+2023-02-03 10:04:46.250  INFO 26880 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-03 10:04:46.251  INFO 26880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-03 10:04:46.267  INFO 26880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
