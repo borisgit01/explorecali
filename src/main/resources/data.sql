@@ -423,10 +423,10 @@ insert into tour  (tour_package_code, title, description, blurb, bullets, diffic
 -- USER
 -- non-encrypted password: letmein
 INSERT INTO security_user (id, username, password, first_name, last_name) VALUES
-(1,  'admin', '$2a$12$ZhGS.zcWt1gnZ9xRNp7inOvo5hIT0ngN7N.pN939cShxKvaQYHnnu', 'Administrator', 'Adminstrator'),
-(2,  'csr_jane', '$2a$12$ZhGS.zcWt1gnZ9xRNp7inOvo5hIT0ngN7N.pN939cShxKvaQYHnnu', 'Jane', 'Doe'),
-(3,  'csr_mark', '$2a$12$ZhGS.zcWt1gnZ9xRNp7inOvo5hIT0ngN7N.pN939cShxKvaQYHnnu', 'Mark', 'Smith'),
-(4,  'wally', '$2a$12$ZhGS.zcWt1gnZ9xRNp7inOvo5hIT0ngN7N.pN939cShxKvaQYHnnu', 'Walter', 'Adams');
+(1,  'admin', '$2a$12$THyWCWaI0jJ7I/F1fL3yle3JQTxk41woH/tTGS5cqX..j03NMQ7s.', 'Administrator', 'Adminstrator'),
+(2,  'csr_jane', '$2a$12$THyWCWaI0jJ7I/F1fL3yle3JQTxk41woH/tTGS5cqX..j03NMQ7s.', 'Jane', 'Doe'),
+(3,  'csr_mark', '$2a$12$THyWCWaI0jJ7I/F1fL3yle3JQTxk41woH/tTGS5cqX..j03NMQ7s.', 'Mark', 'Smith'),
+(4,  'wally', '$2a$12$THyWCWaI0jJ7I/F1fL3yle3JQTxk41woH/tTGS5cqX..j03NMQ7s.', 'Walter', 'Adams');
 
 -- ROLES
 
