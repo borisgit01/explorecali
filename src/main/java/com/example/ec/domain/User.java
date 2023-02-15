@@ -25,6 +25,14 @@ public class User {
         this.roles = Arrays.asList(role);
     }
 
+    public User(String username, String password, Role role, String firstName, String lastName) {
+        this.username = username;
+        this.password = password;
+        this.roles = Arrays.asList(role);
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     @Column(name = "username")
     private String username;
 
