@@ -86,3 +86,13 @@ docker run --name ec-app -p 8080:8080 -v /home/borg/projects/explorecali/src/mai
 ##### Enter Docker container
 ``
 docker exec -t -i ec-app /bin/bash
+
+Build jar, image, set default profile
+sudo mvn package -DskipTests docker:build
+sudo docker run --name ec-app-default -p 8080:8080 -d explorecali-default
+
+sudo mvn package -DskipTests docker:build -Dec-profile=mysql
+sudo docker run --name ec-app-mysql -p 8181:8080 --link ec-mysql:mysql -d explorecali-mysql
+
+sudo mvn package -DskipTests docker:build -Dec-profile=docker
+docker run --name ec-app-docker -p 8282:8080 -v /home/borg/projects/explorecali/src/main/resources/db/migration:/var/migration -e server=ec-mysql -e port=3306 -e dbuser=cali_user -e dbpassword=cali_pass --link ec-mysql:mysql -d explorecali-docker
