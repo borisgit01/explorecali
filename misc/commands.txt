@@ -79,3 +79,10 @@ sudo docker inspect ec-app
 run ec-app container with ec-mysql container
 sudo docker run --name ec-app -p 8080:8080 --link ec-mysql:mysql -d explorecali
 ``
+##### Run Docker container with docker profile set in Dockerfile and migration scripts on host
+``
+docker run --name ec-app -p 8080:8080 -v /home/borg/projects/explorecali/src/main/resources/db/migration:/var/migration -e server=ec-mysql -e port=3306 -e dbuser=cali_user -e dbpassword=cali_pass --link ec-mysql:mysql -d explorecali
+``
+##### Enter Docker container
+``
+docker exec -t -i ec-app /bin/bash
