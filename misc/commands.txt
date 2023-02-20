@@ -20,3 +20,62 @@ curl http://localhost:8080/tours?size=3&page=1&sort=title,asc
 curl http://localhost:8080/tours/search/findByTourPackageCode?code=CC&size=3&page=1&sort=title,asc
 
 curl http://localhost:8080/packages
+
+start.spring.io
+1. Web, which includes Tomcat and Spring MVC
+2. Rest repositories to expose Spring Data repositories over REST
+3. Java Persistance API
+4. H2 in memory database driver
+
+Next to learn: Extending, Securing and Dockerizing Spring Boot Microservices by Mary Ellen Bowman
+
+mysql 8.0.32
+systemctl start mysqld
+systemctl status mysqld
+sudo grep 'temporary password' /var/log/mysqld.log
+mysql -uroot -p
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'Superborg01!';
+
+borg/Justborg01!
+
+to encode password:
+BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+String encodedPasswd = encoder.encode("passwd");
+System.out.println("encoded passwd [" + encodedPasswd + "]");
+
+sudo systemctl start docker
+
+sudo docker run  --detach   --name ec-mysql -p 6604:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=explorecali -e MYSQL_USER=cali_user -e MYSQL_PASSWORD=cali_pass -d mysql
+
+##### Interact with Database (link to ec-mysql container) with mysql client
+sudo docker run -it --link ec-mysql:mysql --rm mysql sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'
+
+mysql> show databases;
+mysql> use explorecali;
+mysql> show tables;
+
+``
+##### Stop ec-mysql container
+``
+docker stop ec-mysql
+``
+##### (ReStart) ec-mysql container
+``
+docker start ec-mysql
+``
+##### Remove ec-mysql container (must stop it first)
+``
+docker rm ec-mysql
+``
+##### Remove image (must stop and remove container first)
+``
+docker rmi mysql:latest
+
+sudo docker build -t explorecali .
+sudo docker run --name ec-app -p8080:8080 -d explorecali
+sudo docker logs ec-app
+sudo docker inspect ec-app
+
+run ec-app container with ec-mysql container
+sudo docker run --name ec-app -p 8080:8080 --link ec-mysql:mysql -d explorecali
+``
