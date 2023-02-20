@@ -35,4 +35,4 @@ build/
 mvnw
 mvnw.cmd
 .mvn
-/logs/myapp.log
+/logs/
